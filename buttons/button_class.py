@@ -7,7 +7,7 @@ game_folder = os.path.dirname(__file__)
 
 class button(pygame.sprite.Sprite):
     def __init__(self):
-        self.button_unclicked = pygame.image.load(os.path.join(game_folder, 'кнопка отжатая.png')).convert()
+        self.button_unclicked = pygame.image.load(os.path.join(game_folder, 'button_unclicked.png')).convert()
         self.button_unclicked.set_colorkey((255,255,255))
         pygame.sprite.Sprite.__init__(self)
         self.image = self.button_unclicked
@@ -25,6 +25,6 @@ class button(pygame.sprite.Sprite):
                     pygame.mouse.get_pos()[0] < self.rect.right and
                     pygame.mouse.get_pos()[1] < self.rect.bottom and
                     pygame.mouse.get_pos()[1] > self.rect.bottom - self.rect.height):
-                button_clicked = pygame.image.load(os.path.join(game_folder, 'кнопка нажатая.png')).convert()
+                button_clicked = pygame.image.load(os.path.join(game_folder, 'button_clicked.png')).convert()
                 self.image = button_clicked
                 self.message = True

@@ -115,4 +115,4 @@ class multy_game():
                 break
         return 0
 
-        # self.disks3.draw(self.screen)
+        # self.disks5.draw(self.screen)
